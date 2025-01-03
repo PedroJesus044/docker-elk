@@ -11,6 +11,12 @@ heartbeat.monitors:
         'Content-Type': 'application/json' 
   check.response:
        status: 200
+
+- type: icmp
+  id: ping-myhost
+  name: My Host Ping
+  hosts: ["myhost"]
+  schedule: '*/5 * * * * * *'
        
 
 output.elasticsearch:
