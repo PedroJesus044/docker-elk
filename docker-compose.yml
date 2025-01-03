@@ -112,7 +112,7 @@ services:
      volumes:
        - ./heartbeat/config/heartbeat.yml:/usr/share/heartbeat/heartbeat.yml:ro
      environment:
-       - output.elasticsearch.hosts=["elasticsearch:9200"]
+       - output.elasticsearch.hosts=["docker-elk-elasticsearch:9200"]
      networks:
        - elk
      depends_on:
